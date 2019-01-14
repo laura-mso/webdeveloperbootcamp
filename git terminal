@@ -1,0 +1,281 @@
+Last login: Sat Dec 29 12:24:52 on ttys000
+M4C-MWS-019:~ user$ which git
+/usr/bin/git
+M4C-MWS-019:~ user$ cd /Users/user/Dropbox/Code
+M4C-MWS-019:Code user$ pwd
+/Users/user/Dropbox/Code
+M4C-MWS-019:Code user$ ls
+02_Installing_Bootstrap			blogexercise.html
+07_ImageBlog1				bootstrap
+09_Selector_Exercise_Starter		bootstrap-3.3.7-dist
+10_Selector_Exercise_Solution		first.html
+Bootstrap4_Code				first.py
+Complete-Python-3-Bootcamp-master	myfirstnotebook.ipynb
+JS					tictactoe.css
+blogexercise.css			tictactoe.html
+M4C-MWS-019:Code user$ cd JS/
+M4C-MWS-019:JS user$ git init
+Initialized empty Git repository in /Users/user/Dropbox/Code/JS/.git/
+M4C-MWS-019:JS user$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/user/.ssh/id_rsa): ^C
+M4C-MWS-019:JS user$ 
+M4C-MWS-019:JS user$ 
+M4C-MWS-019:JS user$ ssh-keygen -t rsa -b 4096 -C "laura.socha@©gmx.net"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/user/.ssh/id_rsa): 
+Created directory '/Users/user/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/user/.ssh/id_rsa.
+Your public key has been saved in /Users/user/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:Acou9yWE0pJ7PsCioRj+9wKg+mssmwXF8Hb/YeWTVts laura.socha@©gmx.net
+The key's randomart image is:
++---[RSA 4096]----+
+|.     .          |
+| + + o .         |
+|  O * . . . .    |
+| = * o   + o o   |
+|* * + o S = . E  |
+|*= B . = o .     |
+|=o. + . .        |
+|oo+  +           |
+|o=oo. o.         |
++----[SHA256]-----+
+M4C-MWS-019:JS user$ eval "$(ssh-agent -s)"
+Agent pid 6370
+M4C-MWS-019:JS user$ defaults write com.apple.finder AppleShowAllFiles -bool TRUE
+M4C-MWS-019:JS user$ ssh-add -K ~/.ssh/id_rsa
+Identity added: /Users/user/.ssh/id_rsa (/Users/user/.ssh/id_rsa)
+M4C-MWS-019:JS user$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+M4C-MWS-019:JS user$ echo "# webdeveloperbootcamp" >> README.md
+M4C-MWS-019:JS user$ git init
+Reinitialized existing Git repository in /Users/user/Dropbox/Code/JS/.git/
+M4C-MWS-019:JS user$ git add README.md
+M4C-MWS-019:JS user$ git commit -m "first commit"
+[master (root-commit) 9d79663] first commit
+ Committer: User <user@M4C-MWS-019.fritz.box>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+M4C-MWS-019:JS user$ git remote add origin git@github.com:laura-mso/webdeveloperbootcamp.git
+M4C-MWS-019:JS user$ git push -u origin master
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 242 bytes | 242.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:laura-mso/webdeveloperbootcamp.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+M4C-MWS-019:JS user$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Arrayproblemset.html
+	Arrayproblemset.js
+	age.html
+	age.js
+	exercisewhile.html
+	exercisewhile.js
+	foreach.js
+	functionsexercise.html
+	functionsexercise.js
+	guessinggame.html
+	guessinggame.js
+	script.html
+	script.js
+	todolist
+	todolist.html
+	todolist.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+M4C-MWS-019:JS user$ git add .
+M4C-MWS-019:JS user$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Arrayproblemset.html
+	new file:   Arrayproblemset.js
+	new file:   age.html
+	new file:   age.js
+	new file:   exercisewhile.html
+	new file:   exercisewhile.js
+	new file:   foreach.js
+	new file:   functionsexercise.html
+	new file:   functionsexercise.js
+	new file:   guessinggame.html
+	new file:   guessinggame.js
+	new file:   script.html
+	new file:   script.js
+	new file:   todolist
+	new file:   todolist.html
+	new file:   todolist.js
+
+M4C-MWS-019:JS user$ git commit -m "firstcommit"
+[master ae63d4d] firstcommit
+ Committer: User <user@M4C-MWS-019.fritz.box>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 16 files changed, 434 insertions(+)
+ create mode 100644 Arrayproblemset.html
+ create mode 100644 Arrayproblemset.js
+ create mode 100644 age.html
+ create mode 100644 age.js
+ create mode 100644 exercisewhile.html
+ create mode 100644 exercisewhile.js
+ create mode 100644 foreach.js
+ create mode 100644 functionsexercise.html
+ create mode 100644 functionsexercise.js
+ create mode 100644 guessinggame.html
+ create mode 100644 guessinggame.js
+ create mode 100644 script.html
+ create mode 100644 script.js
+ create mode 100644 todolist
+ create mode 100644 todolist.html
+ create mode 100644 todolist.js
+M4C-MWS-019:JS user$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+M4C-MWS-019:JS user$ git push
+Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+Counting objects: 18, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (18/18), 3.64 KiB | 1.21 MiB/s, done.
+Total 18 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To github.com:laura-mso/webdeveloperbootcamp.git
+   9d79663..ae63d4d  master -> master
+M4C-MWS-019:JS user$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Arrayproblemset.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+M4C-MWS-019:JS user$ git diff
+diff --git a/Arrayproblemset.js b/Arrayproblemset.js
+index 4da444d..90fec7b 100644
+--- a/Arrayproblemset.js
++++ b/Arrayproblemset.js
+@@ -1,5 +1,5 @@
+ console.log("Test")
+-
++ //change 
+ list = [1,2,3,4,5];
+ 
+ function printReverse(list) {
+M4C-MWS-019:JS user$ git add .
+M4C-MWS-019:JS user$ git commit -m "secondcommit"
+[master ea864e1] secondcommit
+ Committer: User <user@M4C-MWS-019.fritz.box>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+M4C-MWS-019:JS user$ git config --global --edit
+M4C-MWS-019:JS user$ git config --global user.email "laura.socha@gmx.net"
+M4C-MWS-019:JS user$  git commit --amend --reset-author
+[master 0819911] secondcommit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+M4C-MWS-019:JS user$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+M4C-MWS-019:JS user$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 294 bytes | 294.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:laura-mso/webdeveloperbootcamp.git
+   ae63d4d..0819911  master -> master
+M4C-MWS-019:JS user$ 
