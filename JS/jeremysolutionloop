@@ -1,0 +1,20 @@
+
+var isUniform = function(list) {
+  var uniform = false;
+
+  if(list.length > 1){
+    for (var i = 1; i < list.length; i++) {
+      if (list[i] === list[0]) {
+        uniform = true;
+        continue;
+      }else{
+        uniform = false;
+        break;
+      }
+    }
+  }else{
+    uniform = true;
+  }
+
+  return uniform;
+}
